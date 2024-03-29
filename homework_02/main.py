@@ -29,7 +29,6 @@ list_of_quadro=[items**2 for items in list_of_number_two]
 print(list_of_quadro)
 
 my_dict={}
-for i in range(10):
-    my_dict[i**2]=str(i**2)*3
-
+for i in list_of_quadro:
+    my_dict[i]=str(i)*3
 print(my_dict)
