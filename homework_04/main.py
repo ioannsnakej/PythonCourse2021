@@ -23,10 +23,7 @@ PRIME = {
     "PRIME": "prime"
 }
 
-def filter_numbers(*numbers, **filt):
-    print('---------------------------------------------------------')
-    print(numbers)
-    print(filt)
+def filter_numbers(numbers, **filt):
     result=[]
     for key, value in filt.items():
         if value == "odd":
@@ -46,8 +43,8 @@ def filter_numbers(*numbers, **filt):
                     else:
                         result.append(num)
     return result
-    print('---------------------------------------------------------')
 
-print(filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23, **ODD))
-print(filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23, **EVEN))
-print(filter_numbers(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23, **PRIME))
+list=[1,3,6,-5,7,21,23,8,-4,-8,9,15,13]
+print(filter_numbers(list, **ODD))
+print(filter_numbers(list, **EVEN))
+print(filter_numbers(list, **PRIME))
