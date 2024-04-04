@@ -21,9 +21,8 @@ class Car:
 
     def move(self, distance):
         self.distance = distance
-        fuel_for_distance = self.distance * self.fuel_consumption
-        if self.fuel >= fuel_for_distance:
-            self.fuel = self.fuel - fuel_for_distance
+        if self.fuel >= self.distance * self.fuel_consumption:
+            self.fuel = self.fuel - self.distance * self.fuel_consumption
         else:
             raise NotEnoughError("Недостаточно топлива")
         return self.fuel
