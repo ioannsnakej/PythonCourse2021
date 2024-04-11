@@ -17,15 +17,21 @@ class Car:
                 self.started=True
             else:
                 raise LowFuelError("Нет топлива")
+        else:
+            print("Двигатель запущен")
         return self.started
 
     def move(self, distance):
-        self.distance = distance
-        if self.fuel >= self.distance * self.fuel_consumption:
-            self.fuel = self.fuel - self.distance * self.fuel_consumption
-        else:
-            raise NotEnoughError(F"Недостаточно топлива, текущий уровень топлива:{self.fuel}, для преодоления дистанции {self.distance}, требуется топлива:{self.distance * self.fuel_consumption}")
-        return self.fuel
+        try:
+            self.distance = distance
+            if self.fuel >= self.distance * self.fuel_consumption:
+                self.fuel = self.fuel - self.distance * self.fuel_consumption
+            else:
+                raise NotEnoughError("Недостаточно топлива")
+        except NotEnoughError:
+            print("Не хватает топлива, чтобы проехать:", self.distance, "км",
+                  "В баке осталось:", self.fuel, "л",
+                  "Не хватает еще:", self.distance * self.fuel_consumption - self.fuel, "л")
 
 BMW = Car(1640, 50,5,False)
 print(BMW.fuel)
