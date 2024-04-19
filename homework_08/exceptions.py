@@ -1,0 +1,2 @@
+class LowFuelError:
+    pass
