@@ -20,3 +20,14 @@ source env/bin/activate - для Linux и MacOS.
 
 Деактивация: 
 deactivate
+
+# pydantic
+Install: pip install pydantic
+
+pip list - выводит список установленных пакетов
+
+python -m pip install --upgrade pip - обновляет pip
+
+pip freeze - выводит все установленные зависимости
+
+pip freeze > requirements.txt - создает текстовый документ, в котором перечислены все установленные зависимости
