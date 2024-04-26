@@ -1,3 +1,7 @@
+# Run a Python web app
+waitress-serve --listen=127.0.0.1:8080 main:app
+
+
 # Пуш в личный Azure
 git remote remove origin
 git remote add origin https://ioannsnakej@dev.azure.com/ioannsnakej/Python/_git/Python
