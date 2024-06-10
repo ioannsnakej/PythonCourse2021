@@ -1,6 +1,9 @@
 # Run a Python web app
 waitress-serve --listen=127.0.0.1:8080 main:app
 
+# Run docker web app
+docker run -it -p 8000:8000 webapp
+
 
 # Пуш в личный Azure
 git remote remove origin
