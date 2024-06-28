@@ -21,12 +21,11 @@ VALUES
     ('Ivan', 'ivan@example.com'),
     ('Sofia', 'sofia@example.com');
 
-SELECT * FROM users;
-
 INSERT INTO posts (body, user_id)
 VALUES
     ('Привет', 1),
     ('Привет', 2),
     ('Кодекс обновлен', 1);
 
+SELECT * FROM users;
 SELECT * FROM posts;
